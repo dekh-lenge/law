@@ -41,6 +41,9 @@ build/Release
 node_modules/
 platforms/
 plugins/
+build/
+res/
+.DS_Store
 jspm_packages/
 
 # TypeScript v1 declaration files
