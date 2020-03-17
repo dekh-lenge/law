@@ -1,0 +1,71 @@
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+	// padding: 40px 25px 25px;
+	font-family: raleway;
+	margin: 50px 30px;
+
+    h2, p {
+        text-align: center;
+    }
+
+    h2{
+        text-align:center;
+        border-radius: 10px 10px 0 0;
+        font-size: 40px;
+        font-weight: bold;
+        color: green;
+    }
+
+    .input__container {
+        margin-top: 10px;
+        margin-bottom:15px;
+
+        .input__element {
+            width: 100%;
+            min-height: 40px;
+            padding: 0;
+            /*border: 2px solid #ccc;*/
+            border-bottom: 2px solid #ccc;
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            color: #4f4f4f;
+            font-size: 16px;
+            font-weight: bold;
+            outline: none;
+        }
+
+        span {
+            color: #FF0000;
+        }
+    }
+
+    .btn-signin {
+        width: 100%;
+        font-size: 16px;
+        background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+        border: 1px solid #e5a900;
+        color: green;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 10px 0;
+        outline:none;
+        text-align: center;
+    }
+
+    p {
+        u {
+            margin-top: 20px;
+            font-size: 17px;
+            font-weight: bold;
+            color: green;
+            text-align: center;
+        }
+    }
+}

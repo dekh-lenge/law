@@ -1,0 +1,67 @@
+.input__container {
+	position: relative;
+
+	.input {
+		
+		&__element {
+			border: 1px solid var(--off-white);
+			border-radius: 5px;
+			min-height: 50px;
+			min-width: 220px;
+			min-width: 100%;
+			padding: 10px;
+			position: relative;
+			outline: none;
+
+			&--invalid {
+			border: 2px solid var(--dark-error);
+			}
+		}
+
+		&__element::placeholder {
+			font-family: var(--font-default);
+			font-size: 14px;
+			font-weight: 900;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			color: var(--blue-grey);
+		}
+
+		&__label {
+			font-family: var(--font-default);
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+		}
+
+		&__indicator--required {
+			font-size: 20px;
+			color: var(--error);
+			position: relative;
+			margin: 0 2.5px;
+		} 
+	}
+
+	.errorMsg {
+		font-family: var(--font-default);
+		font-size: 10px;
+		font-weight: 300;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--error);
+	}
+
+	.bill_input_size .input__element {
+		max-width:30%;
+	}
+
+	.show_password_img {
+		position: absolute;
+		bottom: 10px;
+    	right: 7px;
+	}
+}
