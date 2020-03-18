@@ -1,7 +1,8 @@
 
 .home-card{
     height: 100px;
-
+    background: #f7f7f9;
+    overflow: hidden;
     .feeds-container {
         display: flex;
         flex-direction: column;
@@ -10,16 +11,24 @@
             margin: 3px 0;
         }
         
-        div {
+        .description {
             margin: 5px 0;
             font-size: 10px;
             font-family: fantasy;
-            max-width: 50vw;
+            max-width: 45vw;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2; /* number of lines to show */
             -webkit-box-orient: vertical;
             overflow: hidden;
+        }
+        img.doc-img {
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            top: 0;
+            right: 0;
+            z-index: 1;
         }
 
     }

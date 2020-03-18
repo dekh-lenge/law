@@ -35,6 +35,7 @@ class Home extends React.Component {
                 id={feedObject.id}
                 timeStamp={feedObject.timeStamp}
                 description={feedObject.description}
+                image={feedObject.image}
             />
         );
     }

@@ -35,10 +35,11 @@ class FeedsCard extends Component {
             <Card 
                 key={id}
                 title={timeStamp}
-                containerClassName="home-card"
+                containerClassName="home-card animated fadeInUp"
             >
                 <div className="feeds-container">
                     <div className="description">{description}</div>
+                    <img className="doc-img" src={image} />
                 </div>
             </Card>
         );
