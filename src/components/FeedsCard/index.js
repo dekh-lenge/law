@@ -34,9 +34,10 @@ class FeedsCard extends Component {
         return(
             <Card 
                 key={id}
+                title={timeStamp}
             >
-                <div>
-                    <p>{description}</p>
+                <div className="feeds-container">
+                    <h2>{description}</h2>
                 </div>
             </Card>
         );

@@ -32,8 +32,9 @@ class Home extends React.Component {
         console.log(feedObject)
         return (
             <FeedsCard 
-                description={feedObject.description}
                 id={feedObject.id}
+                timeStamp={feedObject.timeStamp}
+                description={feedObject.description}
             />
         );
     }
