@@ -39,7 +39,7 @@ class FeedsCard extends Component {
             <Card 
                 key={id}
                 title={timeStamp}
-                containerClassName="home-card animated fadeInUp"
+                containerClassName="home-card"
                 onCardClicked={() => {this.onCardClicked()}}
             >
                 <div className="feeds-container">

@@ -14,6 +14,7 @@ import notification from './containers/notification';
 import UploadPost from './containers/uploadpost';
 import profile from './containers/profile';
 import Subscriptions from './containers/subscription';
+import TransDetails from './containers/transDetails';
 
 /**
  * @name AppRouter
@@ -33,6 +34,7 @@ const AppRouter = () => (
         <Route  path="/upload-post" component={UploadPost} />
         <Route  path="/signup" component={SignUp} />
         <Route  path="/subscriptions" component={Subscriptions} />
+        <Route  path="/transaction-details" component={TransDetails} />
       </Switch>
   </Router>
 );

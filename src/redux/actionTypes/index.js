@@ -41,3 +41,6 @@ export const FETCH_ACTIVITY_SUCCESS = "ACTIVITY/FETCH_ACTIVITY_SUCCESS";
 
 // Set Active Tab
 export const SET_ACTIVE_TAB = "TAB/SET_ACTIVE_TAB";
+
+// Set Transaction Data
+export const SET_TRANSACTION_DATA = "DATA/SET_TRANSACTION_DATA";

@@ -11,6 +11,7 @@ import notifications from './notifications';
 import updateProfile from './updateProfile';
 import logout from './logout';
 import subscriptions from './subscriptions';
+import transactionData from './transactionData';
 
 const rootReducer = combineReducers({
 	loader,
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
 	notifications,
 	updateProfile,
 	logout,
-	subscriptions
+	subscriptions,
+	transactionData
 });
 export default rootReducer;

@@ -9,3 +9,4 @@ export { signUpAction, signUpActionSuccess } from "./signUp";
 export { fetchNotifications, fetchNotificationsSuccess } from "./notifications";
 export { handleUpdateProfile, handleUpdateProfileSuccess } from "./handleUpdateProfile";
 export { setTabName } from "./setActiveTab";
+export { setTransactionData } from "./setTransactionData";

@@ -14,7 +14,7 @@ import ValidationUtil from '../../utils/validation';
 import cx from "classnames";
 import { history } from "./../../utils/history";
 import { connect } from "react-redux";
-import { fetchHomeFeed } from "./../../redux/actions";
+import { fetchHomeFeed,setTransactionData } from "./../../redux/actions";
 
 class Home extends React.Component {
     constructor(props) {
@@ -29,7 +29,8 @@ class Home extends React.Component {
     }
 
     handleFeedsCardClick(feedObject) {
-        console.log("Feed", feedObject);
+        this.props.setTransactionData(feedObject)
+        history.push('/transaction-details')
     }
 
     renderFeed(feedObject) {
@@ -73,6 +74,7 @@ const mapStateToProps = ({ home }) => ({
 const mapDispatchToProps = dispatch => ({
     dispatch,
     fetchHomeFeed: data => dispatch(fetchHomeFeed(data)),
+    setTransactionData: data => dispatch(setTransactionData(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
