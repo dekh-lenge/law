@@ -93,7 +93,7 @@ class SignUp extends Component {
                         required
                         errorMsg={state.isSignupButtonClicked && !state.signupDetails.phoneNumber.isValid ? 'Please enter a valid phone number' : ''}
                         onChange={({ target } ) => {
-                            this.handleInputChange(keys.inputFieldKeys.PHONE_NUMBER, target.value, keys.validationKeys.DIGITS, 1, 100)
+                            this.handleInputChange(keys.inputFieldKeys.PHONE_NUMBER, target.value, keys.validationKeys.DIGITS, 1, 10)
                         }}
                     />      
                     
