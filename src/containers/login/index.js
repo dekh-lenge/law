@@ -111,7 +111,7 @@ class Login extends Component {
                         text="Signin"
                         onClick={() => this.signin()}
                     />
-                    <p onClick={() => {history.push('/signup')}}>New member? <u>Signup</u></p>
+                    <p onClick={() => {history.push('/signup')}}>New member? Signup</p>
                 </div>
             </div>
         )
