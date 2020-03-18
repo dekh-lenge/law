@@ -6,6 +6,7 @@ import "./styles.scss";
 // Components
 import Card from '../../components/Card';
 import FeedsCard from '../../components/FeedsCard';
+import Header from '../../components/Header';
 
 // Utils
 import keys from '../../utils/keys';
@@ -14,7 +15,7 @@ import ValidationUtil from '../../utils/validation';
 import cx from "classnames";
 import { history } from "./../../utils/history";
 import { connect } from "react-redux";
-import { fetchHomeFeed,setTransactionData } from "./../../redux/actions";
+import { fetchHomeFeed, setTransactionData } from "./../../redux/actions";
 
 class Home extends React.Component {
     constructor(props) {
@@ -50,11 +51,11 @@ class Home extends React.Component {
         const { state, props } = this;
         
         return (
-            <div className="screen home-container">
-                <div className="home-header">
-
-                </div>
-                <div className="feeds-container">
+            <div className="screen home">
+                <Header 
+                    title="Feeds"
+                />
+                <div className="home-container">
                     {props.homeData 
                         && props.homeData.feedList
                         && props.homeData.feedList.length > 0 
