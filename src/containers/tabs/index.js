@@ -53,7 +53,11 @@ class Tabs extends Component {
 				className={props.setTab == "upload-post" ? "active_footer" : ''}
 			>
 				<img
-				src={require("../../assets/tabbar/selfie1.svg")}
+				src={
+					props.setTab == "upload-post"
+					? require("../../assets/tabbar/selfie1_active.svg")
+					: require("../../assets/tabbar/selfie1.svg")
+				}
 				alt=""
 				/>
 			</div>

@@ -1,21 +1,26 @@
 
-.feeds-container {
-    display: flex;
-    flex-direction: column;
+.home-card{
+    height: 100px;
 
-    p {
-        margin: 3px 0;
-    }
+    .feeds-container {
+        display: flex;
+        flex-direction: column;
+        
+        p {
+            margin: 3px 0;
+        }
+        
+        div {
+            margin: 5px 0;
+            font-size: 10px;
+            font-family: fantasy;
+            max-width: 50vw;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
 
-    .description {
-        margin: 5px 0;
-        font-size: 10px;
-        font-family: fantasy;
-        overflow: hidden;
-        max-width: 50vw;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* number of lines to show */
-        -webkit-box-orient: vertical;
     }
 }

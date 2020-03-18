@@ -35,6 +35,7 @@ class FeedsCard extends Component {
             <Card 
                 key={id}
                 title={timeStamp}
+                containerClassName="home-card"
             >
                 <div className="feeds-container">
                     <div className="description">{description}</div>
