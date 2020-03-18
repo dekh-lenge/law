@@ -30,6 +30,7 @@
 		}
 
 		&__label {
+			font-size: 12px;
 			font-family: var(--font-default);
 			font-weight: 500;
 			display: flex;
@@ -37,7 +38,7 @@
 		}
 
 		&__indicator--required {
-			font-size: 20px;
+			// font-size: 20px;
 			color: var(--error);
 			position: relative;
 			margin: 0 2.5px;

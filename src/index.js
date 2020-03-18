@@ -17,16 +17,16 @@ import returnStoreAndPersistor from './redux/store';
 // serviceWorker.unregister();
 const { store } = returnStoreAndPersistor()
 function startApp() {
-  ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('root'));
- 
+	ReactDOM.render(
+		<Provider store={store}>
+			<App />
+		</Provider>,
+		document.getElementById('root')
+	);
 }
 
 if (window.cordova) {
-  document.addEventListener('deviceready', startApp, false);
+  	document.addEventListener('deviceready', startApp, false);
 } else {
-  startApp();
+  	startApp();
 }

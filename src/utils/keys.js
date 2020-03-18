@@ -2,6 +2,7 @@
 export default {
     inputFieldKeys: {
         USERNAME: 'username',
+        PHONE_NUMBER: 'phoneNumber',
         EMAIL: 'email',
         PASSWORD: 'password',
         RE_ENTER_PASSWORD: 'reEnterPassword'

@@ -12,17 +12,16 @@ import updateProfile from './updateProfile';
 import logout from './logout';
 import subscriptions from './subscriptions';
 
-
 const rootReducer = combineReducers({
-  loader,
-  home,
-  profile,
-  upload,
-  login,
-  setTab,
-  notifications,
-  updateProfile,
-  logout,
-  subscriptions
+	loader,
+	home,
+	profile,
+	upload,
+	login,
+	setTab,
+	notifications,
+	updateProfile,
+	logout,
+	subscriptions
 });
 export default rootReducer;

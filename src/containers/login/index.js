@@ -27,7 +27,8 @@ class Login extends Component {
             inputType: {
                 password: 'password'
             },
-            isLoginButtonClicked: false
+            isLoginButtonClicked: false,
+            shouldPasswordVisible: false
         };
     }
 
@@ -52,22 +53,15 @@ class Login extends Component {
         if(!currentState.isLoginButtonClicked) {
             this.setState({isLoginButtonClicked: true});
         }
+
+        history.push("/tabs");
     }
 
-    handleMouseEvent(val) {
+    handleOnShowPasswordClick() {
         const currentState = { ...this.state }
-        switch (val) {
-            case "mousedown":
-                currentState.inputType.password = "text"
-                break;
-
-            case "mouseup":
-                currentState.inputType.password = "password"
-                break;
+        currentState.shouldPasswordVisible = !currentState.shouldPasswordVisible;
+        console.log("Current state", currentState.shouldPasswordVisible);
         
-            default:
-                break;
-        }
         this.setState(currentState);
     }
 
@@ -94,7 +88,7 @@ class Login extends Component {
 
                     <InputDefault 
                         className="input-size" 
-                        type={state.inputType.password}
+                        type={state.shouldPasswordVisible ? "text" : "password"}
                         hasLabel
                         hasShowPasswordIcon
                         label="Password"
@@ -105,8 +99,8 @@ class Login extends Component {
                         onChange={({ target } ) => {
                             this.handleInputChange(keys.inputFieldKeys.PASSWORD, target.value, keys.validationKeys.ALPHA_SPACE, 1, 100)
                         }}
-                        onMouseEvent={ (event) => {
-                            this.handleMouseEvent(event);
+                        onShowPasswordClick={ () => {
+                            this.handleOnShowPasswordClick();
                         }}
                     />
 

@@ -35,24 +35,26 @@ class Tabs extends Component {
 				onClick={() => {
 				this.handleTabbarTabNavigation("home");
 				}}
-				className={props.setTab == "home" ? "active_footer" : ""}
+				className={props.setTab === "home" ? "active_footer" : ""}
 			>
 				<img
-				src={
-					props.setTab == "home"
-					? require("../../assets/tabbar/home1_active.svg")
-					: require("../../assets/tabbar/home1.svg")
-				}
+					src={
+						props.setTab == "home"
+						? require("../../assets/tabbar/home1_active.svg")
+						: require("../../assets/tabbar/home1.svg")
+					}
+					alt=""
 				/>
 			</div>
 			<div
 				onClick={() => {
 				this.handleTabbarTabNavigation("upload-post");
 				}}
-				className={props.setTab == "upload-post" && "active_footer" }
+				className={props.setTab == "upload-post" ? "active_footer" : ''}
 			>
 				<img
 				src={require("../../assets/tabbar/selfie1.svg")}
+				alt=""
 				/>
 			</div>
 			<div
@@ -69,6 +71,7 @@ class Tabs extends Component {
 					? require("../../assets/tabbar/activity1_active.svg")
 					: require("../../assets/tabbar/activity1.svg")
 				}
+				alt=""
 				/>
 			</div> 
 			<div
@@ -78,11 +81,12 @@ class Tabs extends Component {
 				className={props.setTab == "user" ? "active_footer" : ""}
 			>
 				<img
-				src={
-					props.setTab == "user"
-					? require("../../assets/tabbar/user1_active.svg")
-					: require("../../assets/tabbar/user1.svg")
-				}
+					src={
+						props.setTab == "user"
+						? require("../../assets/tabbar/user1_active.svg")
+						: require("../../assets/tabbar/user1.svg")
+					}
+					alt=""
 				/>
 				{props.newData === 'user' && 
 				<p className="newData"></p>

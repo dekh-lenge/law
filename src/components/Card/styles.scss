@@ -1,0 +1,14 @@
+.custom-card {
+  background: var(--white);
+  padding: 16px 22px;
+  border: 1px solid var(--pale-grey-two);
+  border-radius: 6px;
+
+  &__title {
+    font-size: 14px;
+    margin: 0;
+    color: var(--dark);
+    margin-bottom: 15px;
+  }
+
+}

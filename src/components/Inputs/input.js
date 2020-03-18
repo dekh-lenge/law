@@ -1,6 +1,8 @@
 import React from 'react';
+
 // LIBRARIES
 import cx from 'classnames';
+
 // STYLES
 import './styles.scss';
 
@@ -39,23 +41,18 @@ class InputDefault extends React.Component {
 		);
 	}
 
-	handleEvent = (event) => {
-		const { type } = this.props;
-		if (event.type === "mousedown") {
-			this.props.onMouseEvent && this.props.onMouseEvent("mousedown")
-		} else {
-			this.props.onMouseEvent && this.props.onMouseEvent("mouseup")
-		}
+	handleShowPasswordClick() {
+		this.props.onShowPasswordClick && this.props.onShowPasswordClick();
 	}
 
 	renderShowPasswordIcon() {
-
 		return (
 			<img 
 				className="show_password_img"
 				src={require(`../../assets/eye.png`)}
-				onMouseDown={ this.handleEvent } 
-				onMouseUp={ this.handleEvent }
+				onClick={() => {
+					this.handleShowPasswordClick();
+				}}
 				width="20" 
 				height="20"
 				alt="" />

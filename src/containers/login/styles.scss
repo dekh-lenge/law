@@ -7,7 +7,7 @@
     height: auto;
 	// padding: 40px 25px 25px;
 	font-family: raleway;
-	margin: 50px 30px;
+	margin: 0 30px;
 
     h2, p {
         text-align: center;
@@ -16,7 +16,7 @@
     h2{
         text-align:center;
         border-radius: 10px 10px 0 0;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
         color: green;
     }
@@ -27,7 +27,7 @@
 
         .input__element {
             width: 100%;
-            min-height: 40px;
+            min-height: 35px;
             padding: 0;
             /*border: 2px solid #ccc;*/
             border-bottom: 2px solid #ccc;
@@ -60,9 +60,10 @@
     }
 
     p {
+        font-size: 12px;
+        margin: 5px 0;
         u {
             margin-top: 20px;
-            font-size: 17px;
             font-weight: bold;
             color: green;
             text-align: center;

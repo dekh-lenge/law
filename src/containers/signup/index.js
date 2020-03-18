@@ -21,6 +21,7 @@ class SignUp extends Component {
         this.state = {
             signupDetails: {
                 username: { val: '', isValid: false },
+                phoneNumber: {val: '', isValid: false},
                 email: { val: '', isValid: false },
                 password: { val: '', isValid: false },
                 reEnterPassword: { val: '', isValid: false },
@@ -53,11 +54,17 @@ class SignUp extends Component {
         console.log("Signup clicked");
     }
 
+    handleOnShowPasswordClick() {
+        const currentState = { ...this.state }
+        currentState.shouldPasswordVisible = !currentState.shouldPasswordVisible;
+        this.setState(currentState);
+    }
+
     render() {
         const { state, props } = this;
 
         return (
-            <div className="container">
+            <div className="container signup-container">
                 <div className="main">
                     <h2>Sign up</h2>
                     <InputDefault 
@@ -74,7 +81,21 @@ class SignUp extends Component {
                             this.handleInputChange(keys.inputFieldKeys.USERNAME, target.value, keys.validationKeys.ALPHA_SPACE, 1, 100)
                         }}
                     />
-                    <span id="nameErr"></span>
+
+                    <InputDefault 
+                        className="input-size" 
+                        type="text" 
+                        hasLabel 
+                        label="Phone Number"
+                        placeholder="Enter Phone Number"
+                        autoComplete="off"
+                        value = {state.signupDetails.phoneNumber.val || ''}
+                        required
+                        errorMsg={state.isSignupButtonClicked && !state.signupDetails.phoneNumber.isValid ? 'Please enter a valid phone number' : ''}
+                        onChange={({ target } ) => {
+                            this.handleInputChange(keys.inputFieldKeys.PHONE_NUMBER, target.value, keys.validationKeys.DIGITS, 1, 100)
+                        }}
+                    />      
                     
                     <InputDefault 
                         className="input-size" 
@@ -96,7 +117,6 @@ class SignUp extends Component {
                             className="input-size" 
                             type="password" 
                             hasLabel 
-                            hasShowPasswordIcon
                             label="Password"
                             placeholder="Enter Password"
                             autoComplete="off"
@@ -123,6 +143,9 @@ class SignUp extends Component {
                             errorMsg={state.isSignupButtonClicked && !state.signupDetails.reEnterPassword.isValid ? 'Please confirm password' : ''}
                             onChange={({ target } ) => {
                                 this.handleInputChange(keys.inputFieldKeys.RE_ENTER_PASSWORD, target.value, keys.validationKeys.PASSWORD, 1, 100)
+                            }}
+                            onShowPasswordClick={ () => {
+                                this.handleOnShowPasswordClick();
                             }}
                         />
                     </div>

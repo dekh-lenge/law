@@ -127,8 +127,9 @@ class App extends React.Component {
       },
       false
     );
+    // eslint-disable-next-line no-lone-blocks
     {
-      // localStorage.getItem("isUser") == 1 &&
+      localStorage.getItem("isUser") == 1 &&
       localStorage.getItem("accessToken") != null
         ? history.push("/tabs")
         : history.push("/login");
