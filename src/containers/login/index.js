@@ -108,7 +108,6 @@ class Login extends Component {
                         buttonClassName = "w-50 mr2 btn-signin"
                         secondary="true"
                         medium="true"
-                        variant="outline" 
                         text="Signin"
                         onClick={() => this.signin()}
                     />

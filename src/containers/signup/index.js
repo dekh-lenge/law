@@ -154,7 +154,6 @@ class SignUp extends Component {
                         buttonClassName = "w-50 mr2"
                         secondary="true"
                         medium="true"
-                        variant="outline" 
                         text="Signup"
                         onClick={() => this.signup()}
                     />
