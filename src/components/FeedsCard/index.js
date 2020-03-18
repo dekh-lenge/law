@@ -19,7 +19,7 @@ class FeedsCard extends Component {
     }
 
     onCardClicked() {
-        this.props.onFeedsCardClicked && this.props.onFeedsCardClicked()
+        this.props.onCardClicked && this.props.onCardClicked()
     }
 
     render() {

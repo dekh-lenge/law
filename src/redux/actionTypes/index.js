@@ -44,3 +44,6 @@ export const SET_ACTIVE_TAB = "TAB/SET_ACTIVE_TAB";
 
 // Set Transaction Data
 export const SET_TRANSACTION_DATA = "DATA/SET_TRANSACTION_DATA";
+
+// Set Notification Details
+export const SET_NOTIFICATION_DETAILS = "NOTIFICATION/SET_NOTIFICATION_DETAILS";

@@ -10,3 +10,4 @@ export { fetchNotifications, fetchNotificationsSuccess } from "./notifications";
 export { handleUpdateProfile, handleUpdateProfileSuccess } from "./handleUpdateProfile";
 export { setTabName } from "./setActiveTab";
 export { setTransactionData } from "./setTransactionData";
+export { setNotificationData } from "./setNotificationData";

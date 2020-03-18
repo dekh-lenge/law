@@ -3,10 +3,14 @@ import React, { Component } from "react";
 // Styles
 import './styles.scss';
 
+// Components
+import FeedsCard from '../../components/FeedsCard';
+import Header from '../../components/Header';
+
 import cx from "classnames";
 import { history } from "./../../utils/history";
 import { connect } from "react-redux";
-import { fetchNotifications } from "./../../redux/actions";
+import { fetchNotifications, setNotificationData } from "./../../redux/actions";
 
 class Notification extends Component {
     constructor(props) {
@@ -15,15 +19,42 @@ class Notification extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchNotifications()
+        // this.props.fetchNotifications()
+    }
+
+    handleCardClick(feedObject) {
+        this.props.setNotificationData(feedObject)
+        history.push('/notification-details')
+    }
+
+    renderNotification(notificationObject) {
+        console.log("Notification", notificationObject);
+        
+        return(
+            <FeedsCard 
+                id={notificationObject.id}
+                timeStamp={notificationObject.timeStamp}
+                description={notificationObject.description}
+                onCardClicked={() => {this.handleCardClick(notificationObject)}}
+            />
+        );
     }
 
     render() {
         const { props, state } = this;
         return (
-        <div>
-            <p>Activity</p>
-        </div>
+            <div className="screen notifications">
+                <Header title="Notifications" />
+                <div className="notifications-container">
+                    {props.notificationData
+                        && props.notificationData.notificationList
+                        && props.notificationData.notificationList.length > 0
+                        && props.notificationData.notificationList.map((notificationObject, index) => {
+                            return this.renderNotification(notificationObject);
+                        })
+                    }
+                </div> 
+            </div>
         );
     }
 }
@@ -33,7 +64,7 @@ const mapStateToProps = ({ notifications, loader }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchNotifications: data => dispatch(fetchNotifications(data))
+    setNotificationData: data => dispatch(setNotificationData(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Notification);

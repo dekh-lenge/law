@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import "./styles.scss";
 
 // Components
-import Card from '../../components/Card';
 import FeedsCard from '../../components/FeedsCard';
 import Header from '../../components/Header';
 
@@ -29,20 +28,19 @@ class Home extends React.Component {
         // this.props.fetchHomeFeed(this.state.data)
     }
 
-    handleFeedsCardClick(feedObject) {
+    handleCardClick(feedObject) {
         this.props.setTransactionData(feedObject)
         history.push('/transaction-details')
     }
 
     renderFeed(feedObject) {
-        console.log(feedObject)
         return (
             <FeedsCard 
                 id={feedObject.id}
                 timeStamp={feedObject.timeStamp}
                 description={feedObject.description}
                 image={feedObject.image}
-                onFeedsCardClicked={() => {this.handleFeedsCardClick(feedObject)}}
+                onCardClicked={() => {this.handleCardClick(feedObject)}}
             />
         );
     }
