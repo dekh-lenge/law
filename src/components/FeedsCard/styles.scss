@@ -7,9 +7,15 @@
         margin: 3px 0;
     }
 
-    h2 {
+    .description {
         margin: 5px 0;
         font-size: 10px;
         font-family: fantasy;
+        overflow: hidden;
+        max-width: 50vw;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-box-orient: vertical;
     }
 }

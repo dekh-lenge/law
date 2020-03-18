@@ -37,7 +37,7 @@ class FeedsCard extends Component {
                 title={timeStamp}
             >
                 <div className="feeds-container">
-                    <h2>{description}</h2>
+                    <div className="description">{description}</div>
                 </div>
             </Card>
         );
