@@ -16,6 +16,10 @@ class Card extends React.Component {
     return { __html: text };
   }
 
+  handleCardClick() {
+    this.props.onCardClicked && this.props.onCardClicked();
+  }
+
   render() {
     const { props } = this;
     const {
@@ -32,6 +36,7 @@ class Card extends React.Component {
         {...others}
         className={cx("custom-card", containerClassName)}
         style={containerStyles}
+        onClick={() => {this.handleCardClick()}}
       >
         
         <h2 className = "custom-card__title" > {title } </h2>

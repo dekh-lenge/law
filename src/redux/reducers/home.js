@@ -33,6 +33,30 @@ const initialState = {
 				timeStamp: "15th march 2019",
 				description: "Home feed test description 5",
 				image: "https://reactnativecode.com/wp-content/uploads/2017/05/react_thumb_install.png"
+			},
+			{	
+				id: 6,
+				timeStamp: "14th march 2019",
+				description: "Home feed test description 4",
+				image: "https://reactnativecode.com/wp-content/uploads/2017/05/react_thumb_install.png"
+			},
+			{	
+				id: 7,
+				timeStamp: "15th march 2019",
+				description: "Home feed test description 5",
+				image: "https://reactnativecode.com/wp-content/uploads/2017/05/react_thumb_install.png"
+			},
+			{	
+				id: 8,
+				timeStamp: "14th march 2019",
+				description: "Home feed test description 4",
+				image: "https://reactnativecode.com/wp-content/uploads/2017/05/react_thumb_install.png"
+			},
+			{	
+				id: 9,
+				timeStamp: "15th march 2019",
+				description: "Home feed test description 5",
+				image: "https://reactnativecode.com/wp-content/uploads/2017/05/react_thumb_install.png"
 			}
 		]
 	},

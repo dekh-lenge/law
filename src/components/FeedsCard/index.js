@@ -18,6 +18,10 @@ class FeedsCard extends Component {
         }
     }
 
+    onCardClicked() {
+        this.props.onFeedsCardClicked && this.props.onFeedsCardClicked()
+    }
+
     render() {
         const { props } = this;
         const {
@@ -36,6 +40,7 @@ class FeedsCard extends Component {
                 key={id}
                 title={timeStamp}
                 containerClassName="home-card animated fadeInUp"
+                onCardClicked={() => {this.onCardClicked()}}
             >
                 <div className="feeds-container">
                     <div className="description">{description}</div>

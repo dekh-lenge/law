@@ -28,6 +28,10 @@ class Home extends React.Component {
         // this.props.fetchHomeFeed(this.state.data)
     }
 
+    handleFeedsCardClick(feedObject) {
+        console.log("Feed", feedObject);
+    }
+
     renderFeed(feedObject) {
         console.log(feedObject)
         return (
@@ -36,6 +40,7 @@ class Home extends React.Component {
                 timeStamp={feedObject.timeStamp}
                 description={feedObject.description}
                 image={feedObject.image}
+                onFeedsCardClicked={() => {this.handleFeedsCardClick(feedObject)}}
             />
         );
     }
@@ -45,12 +50,17 @@ class Home extends React.Component {
         
         return (
             <div className="screen home-container">
-                {props.homeData 
-                    && props.homeData.feedList
-                    && props.homeData.feedList.length > 0 
-                    && props.homeData.feedList.map((feedObject, index) => {
-                        return this.renderFeed(feedObject);
+                <div className="home-header">
+
+                </div>
+                <div className="feeds-container">
+                    {props.homeData 
+                        && props.homeData.feedList
+                        && props.homeData.feedList.length > 0 
+                        && props.homeData.feedList.map((feedObject, index) => {
+                            return this.renderFeed(feedObject);
                     })}
+                </div>
             </div>
         );
     }
