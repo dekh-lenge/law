@@ -69,7 +69,7 @@ class Login extends Component {
         const {state, props} = this;
 
         return (
-            <div className="container login-container">
+            <div className="container login-container login-signup">
                 <div className="main">
                     <h2>Sign In</h2>
                     <InputDefault 

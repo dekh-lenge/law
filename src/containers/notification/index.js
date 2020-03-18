@@ -28,8 +28,8 @@ class Notification extends Component {
     }
 }
 
-const mapStateToProps = ({ activity, loader }) => ({
-    notificationData: activity.data
+const mapStateToProps = ({ notifications, loader }) => ({
+    notificationData: notifications.data
 });
 
 const mapDispatchToProps = dispatch => ({

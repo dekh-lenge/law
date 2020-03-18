@@ -64,7 +64,7 @@ class SignUp extends Component {
         const { state, props } = this;
 
         return (
-            <div className="container signup-container">
+            <div className="container signup-container login-signup">
                 <div className="main">
                     <h2>Sign up</h2>
                     <InputDefault 
