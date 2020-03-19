@@ -51,6 +51,7 @@ class SignUp extends Component {
         if(!currentState.isSignupButtonClicked) {
             this.setState({isSignupButtonClicked: true});
         }
+        console.log("Signup clicked");
     }
 
     handleOnShowPasswordClick() {
