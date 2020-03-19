@@ -157,7 +157,7 @@ class SignUp extends Component {
                         text="Signup"
                         onClick={() => this.signup()}
                     />
-                    <p onClick={() => {history.push('/login')}}> Already a member? Signin</p>
+                    <p onClick={() => {history.goBack()}}> Already a member? Signin</p>
                 </div>
             </div>
         );
